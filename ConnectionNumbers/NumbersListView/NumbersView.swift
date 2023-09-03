@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct NumbersView: View {
     var body: some View {
         VStack {
             Image(systemName: "checkerboard.rectangle")
@@ -18,11 +18,12 @@ struct ContentView: View {
                 .font(.largeTitle)
         }
         .padding()
+        
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        NumbersView()
     }
 }

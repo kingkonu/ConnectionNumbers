@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		9F3F6CE42A9D3E910002E714 /* ConnectionNumbersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3F6CE32A9D3E910002E714 /* ConnectionNumbersApp.swift */; };
-		9F3F6CE62A9D3E910002E714 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3F6CE52A9D3E910002E714 /* ContentView.swift */; };
+		9F3F6CE62A9D3E910002E714 /* NumbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3F6CE52A9D3E910002E714 /* NumbersView.swift */; };
 		9F3F6CE82A9D3E920002E714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F3F6CE72A9D3E920002E714 /* Assets.xcassets */; };
 		9F3F6CEB2A9D3E920002E714 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F3F6CEA2A9D3E920002E714 /* Preview Assets.xcassets */; };
+		9FC3CA512AA4EBC1008788D0 /* NumbersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3CA502AA4EBC1008788D0 /* NumbersViewModel.swift */; };
+		9FC3CA532AA4EBE7008788D0 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3CA522AA4EBE7008788D0 /* Number.swift */; };
+		9FC3CA552AA4EC15008788D0 /* NumberDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3CA542AA4EC15008788D0 /* NumberDetailView.swift */; };
+		9FC3CA572AA4ED18008788D0 /* NumberDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3CA562AA4ED18008788D0 /* NumberDetailViewModel.swift */; };
+		9FC3CA592AA4ED5E008788D0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3CA582AA4ED5E008788D0 /* NetworkManager.swift */; };
+		9FC3CA5B2AA4ED6D008788D0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3CA5A2AA4ED6D008788D0 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9F3F6CE02A9D3E910002E714 /* ConnectionNumbers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConnectionNumbers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F3F6CE32A9D3E910002E714 /* ConnectionNumbersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionNumbersApp.swift; sourceTree = "<group>"; };
-		9F3F6CE52A9D3E910002E714 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9F3F6CE52A9D3E910002E714 /* NumbersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersView.swift; sourceTree = "<group>"; };
 		9F3F6CE72A9D3E920002E714 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F3F6CEA2A9D3E920002E714 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9FC3CA502AA4EBC1008788D0 /* NumbersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersViewModel.swift; sourceTree = "<group>"; };
+		9FC3CA522AA4EBE7008788D0 /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
+		9FC3CA542AA4EC15008788D0 /* NumberDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberDetailView.swift; sourceTree = "<group>"; };
+		9FC3CA562AA4ED18008788D0 /* NumberDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberDetailViewModel.swift; sourceTree = "<group>"; };
+		9FC3CA582AA4ED5E008788D0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9FC3CA5A2AA4ED6D008788D0 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				9F3F6CE32A9D3E910002E714 /* ConnectionNumbersApp.swift */,
-				9F3F6CE52A9D3E910002E714 /* ContentView.swift */,
+				9FC3CA4C2AA4EB07008788D0 /* NumbersListView */,
+				9FC3CA4D2AA4EB44008788D0 /* NumbersDetails */,
+				9FC3CA4E2AA4EB60008788D0 /* Services */,
+				9FC3CA4F2AA4EB7C008788D0 /* Models */,
 				9F3F6CE72A9D3E920002E714 /* Assets.xcassets */,
 				9F3F6CE92A9D3E920002E714 /* Preview Content */,
 			);
@@ -65,6 +80,41 @@
 				9F3F6CEA2A9D3E920002E714 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9FC3CA4C2AA4EB07008788D0 /* NumbersListView */ = {
+			isa = PBXGroup;
+			children = (
+				9F3F6CE52A9D3E910002E714 /* NumbersView.swift */,
+				9FC3CA502AA4EBC1008788D0 /* NumbersViewModel.swift */,
+			);
+			path = NumbersListView;
+			sourceTree = "<group>";
+		};
+		9FC3CA4D2AA4EB44008788D0 /* NumbersDetails */ = {
+			isa = PBXGroup;
+			children = (
+				9FC3CA542AA4EC15008788D0 /* NumberDetailView.swift */,
+				9FC3CA562AA4ED18008788D0 /* NumberDetailViewModel.swift */,
+			);
+			path = NumbersDetails;
+			sourceTree = "<group>";
+		};
+		9FC3CA4E2AA4EB60008788D0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9FC3CA582AA4ED5E008788D0 /* NetworkManager.swift */,
+				9FC3CA5A2AA4ED6D008788D0 /* DataManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9FC3CA4F2AA4EB7C008788D0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9FC3CA522AA4EBE7008788D0 /* Number.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +187,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F3F6CE62A9D3E910002E714 /* ContentView.swift in Sources */,
+				9FC3CA572AA4ED18008788D0 /* NumberDetailViewModel.swift in Sources */,
+				9FC3CA5B2AA4ED6D008788D0 /* DataManager.swift in Sources */,
+				9FC3CA552AA4EC15008788D0 /* NumberDetailView.swift in Sources */,
+				9FC3CA532AA4EBE7008788D0 /* Number.swift in Sources */,
+				9FC3CA592AA4ED5E008788D0 /* NetworkManager.swift in Sources */,
+				9FC3CA512AA4EBC1008788D0 /* NumbersViewModel.swift in Sources */,
+				9F3F6CE62A9D3E910002E714 /* NumbersView.swift in Sources */,
 				9F3F6CE42A9D3E910002E714 /* ConnectionNumbersApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
