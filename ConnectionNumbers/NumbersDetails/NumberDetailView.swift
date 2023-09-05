@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct NumberDetailView: View {
+    var viewModel: NumberDetailsViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text("\(viewModel.numberMultipliable) x \(viewModel.numberMultiplier) = \(viewModel.numberComposition)")
+                .font(.largeTitle)
+        }
     }
 }
 
 struct NumberDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        NumberDetailView()
+        NumberDetailView(viewModel: NumberDetailsViewModel(number: Number.getExample()))
     }
 }

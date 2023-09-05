@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct NumbersView: View {
+    @StateObject private var viewModel = NumbersViewModel()
+
     var body: some View {
-        VStack {
-            Image(systemName: "checkerboard.rectangle")
-                .resizable()
-                .frame(width: 100, height: 100)
-                .foregroundColor(.indigo)
-            Text("Connection Numbers")
-                .font(.largeTitle)
+        NavigationView {
+            List {
+                ForEach(viewModel.levels, id: \.numberMultipliable) { number in
+                    Text("\(number.numberMultipliable)")
+                }
+            }
+                    .navigationTitle("Умножение")
         }
-        .padding()
         
     }
 }

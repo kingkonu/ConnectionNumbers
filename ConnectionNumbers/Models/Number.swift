@@ -8,8 +8,18 @@
 import Foundation
 
 struct Number {
-    let multipliable = 1
-    let multiplier = 2
-    var composition: Int
+    let multipliable: [Int] // множимое
+    let multiplier: [Int]  // множитель
+    var composition: Int // произведение
 
+}
+
+extension Number {
+    static func getExample() -> Number {
+        Number(
+            multipliable: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+            multiplier: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+            composition: 0
+        )
+    }
 }

@@ -7,16 +7,17 @@
 
 import SwiftUI
 
-struct NumbersViewModel: View {
-//    var composition: Int
+class NumbersViewModel: ObservableObject {
+    @Published var levels: [NumberDetailsViewModel] = []
 
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+ 
+
+//    func start() {
+//        var numbers = [Number].self
+//        numbers.forEach { number in
+//            let numberDetailsViewModel = NumberDetailsViewModel(number: number)
+//            numbers.append(numberDetailsViewModel)
+//        }
+//    }
 }
 
-struct NumbersViewModel_Previews: PreviewProvider {
-    static var previews: some View {
-        NumbersViewModel()
-    }
-}
