@@ -17,6 +17,7 @@
 		9FC3CA572AA4ED18008788D0 /* NumberDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3CA562AA4ED18008788D0 /* NumberDetailsViewModel.swift */; };
 		9FC3CA592AA4ED5E008788D0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3CA582AA4ED5E008788D0 /* NetworkManager.swift */; };
 		9FC3CA5B2AA4ED6D008788D0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3CA5A2AA4ED6D008788D0 /* DataManager.swift */; };
+		9FC3CA5F2AACC3A4008788D0 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3CA5E2AACC3A4008788D0 /* RowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		9FC3CA562AA4ED18008788D0 /* NumberDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberDetailsViewModel.swift; sourceTree = "<group>"; };
 		9FC3CA582AA4ED5E008788D0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		9FC3CA5A2AA4ED6D008788D0 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		9FC3CA5E2AACC3A4008788D0 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				9F3F6CE52A9D3E910002E714 /* NumbersView.swift */,
 				9FC3CA502AA4EBC1008788D0 /* NumbersViewModel.swift */,
+				9FC3CA5E2AACC3A4008788D0 /* RowView.swift */,
 			);
 			path = NumbersListView;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				9FC3CA5B2AA4ED6D008788D0 /* DataManager.swift in Sources */,
 				9FC3CA552AA4EC15008788D0 /* NumberDetailView.swift in Sources */,
 				9FC3CA532AA4EBE7008788D0 /* Number.swift in Sources */,
+				9FC3CA5F2AACC3A4008788D0 /* RowView.swift in Sources */,
 				9FC3CA592AA4ED5E008788D0 /* NetworkManager.swift in Sources */,
 				9FC3CA512AA4EBC1008788D0 /* NumbersViewModel.swift in Sources */,
 				9F3F6CE62A9D3E910002E714 /* NumbersView.swift in Sources */,

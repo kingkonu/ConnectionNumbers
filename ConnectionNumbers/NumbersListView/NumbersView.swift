@@ -12,14 +12,18 @@ struct NumbersView: View {
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(viewModel.levels, id: \.numberMultipliable) { number in
-                    Text("\(number.numberMultipliable)")
+            List(viewModel.levels, id: \.numberMultipliable) { course in
+                NavigationLink(destination: NumberDetailView(viewModel: course)) {
+                    RowView(viewModel: course)
                 }
             }
-                    .navigationTitle("Умножение")
+            .navigationTitle("Умножение")
+            .navigationBarItems(trailing: Button("Start") {
+                Task {
+                    viewModel.start()
+                }
+            })
         }
-        
     }
 }
 
