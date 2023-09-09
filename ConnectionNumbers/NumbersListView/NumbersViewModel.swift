@@ -11,20 +11,43 @@ class NumbersViewModel: ObservableObject {
     @Published var levels: [NumberDetailsViewModel] = []
 
     func start() {
-        let one = NumberDetailsViewModel(number: Number.getExample())
-        levels.append(one)
-        let two = NumberDetailsViewModel(number: Number.getExample())
-        levels.append(two)
+        let oneStep = NumberDetailsViewModel(
+            number: Number.init(multipliable: [1], multiplier: [1,2, 3, 4, 5, 6, 7, 8, 9], composition: 1)
+        )
+        levels.append(oneStep)
+        let twoStep = NumberDetailsViewModel(
+            number: Number.init(multipliable: [2], multiplier: [1, 2, 3, 4, 5, 6, 7, 8, 9], composition: 2)
+        )
+        levels.append(twoStep)
+        let threeStep = NumberDetailsViewModel(
+            number: Number.init(multipliable: [3], multiplier: [1, 2, 3, 4, 5, 6, 7, 8, 9], composition: 3)
+        )
+        levels.append(threeStep)
+        let fourStep = NumberDetailsViewModel(
+            number: Number.init(multipliable: [4], multiplier: [1, 2, 3, 4, 5, 6, 7, 8, 9], composition: 4)
+        )
+        levels.append(fourStep)
+        let fiveStep = NumberDetailsViewModel(
+            number: Number.init(multipliable: [5], multiplier: [1, 2, 3, 4, 5, 6, 7, 8, 9], composition: 5)
+        )
+        levels.append(fiveStep)
+        let sixStep = NumberDetailsViewModel(
+            number: Number.init(multipliable: [6], multiplier: [1, 2, 3, 4, 5, 6, 7, 8, 9], composition: 6)
+        )
+        levels.append(sixStep)
+        let sevenStep = NumberDetailsViewModel(
+            number: Number.init(multipliable: [7], multiplier: [1, 2, 3, 4, 5, 6, 7, 8, 9], composition: 7)
+        )
+        levels.append(sevenStep)
+        let eightStep = NumberDetailsViewModel(
+            number: Number.init(multipliable: [8], multiplier: [1, 2, 3, 4, 5, 6, 7, 8, 9], composition: 8)
+        )
+        levels.append(eightStep)
+        let nineStep = NumberDetailsViewModel(
+            number: Number.init(multipliable: [9], multiplier: [1, 2, 3, 4, 5, 6, 7, 8, 9], composition: 9)
+        )
+        levels.append(nineStep)
     }
-//
-//    func start() {
 
-
-//        var numbers = [Number].self
-//        numbers.forEach([Number.getExample()]) { number in
-//            let numberDetailsViewModel = NumberDetailsViewModel(number: number)
-//            numbers.append(numberDetailsViewModel)
-//        }
-//    }
 }
 

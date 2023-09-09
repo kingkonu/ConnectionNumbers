@@ -11,9 +11,31 @@ struct NumberDetailView: View {
     var viewModel: NumberDetailsViewModel
     
     var body: some View {
-        HStack {
-            Text("\(viewModel.numberMultipliable) x \(viewModel.numberMultiplier) = \(viewModel.numberComposition)")
-                .font(.largeTitle)
+
+        VStack {
+            Text("Дай правильный ответ")
+            Spacer()
+            HStack {
+                Image(systemName: "star")
+                Image(systemName: "star")
+                Image(systemName: "star")
+                Image(systemName: "star")
+                Image(systemName: "star")
+            }
+            .padding()
+
+            HStack {
+                Text("\(viewModel.numberMultipliable) x \(viewModel.numberMultiplier) = \(viewModel.numberComposition)")
+                    .font(.largeTitle)
+            }
+
+            Spacer()
+
+            Button("Проверить") {
+
+            }
+            .padding()
+            .font(.largeTitle)
         }
     }
 }

@@ -12,8 +12,9 @@ struct RowView: View {
 
     var body: some View {
         VStack {
-            Text("\(viewModel.numberMultipliable) x \(viewModel.numberMultiplier) = \(viewModel.numberComposition)")
+            Text("\(viewModel.numberMultipliable)   x   \(viewModel.numberMultiplier)   =   ? ")
         }
+        .font(.title2)
     }
 }
 
