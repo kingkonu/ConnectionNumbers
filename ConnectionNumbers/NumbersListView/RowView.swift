@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RowView: View {
     let viewModel: NumberDetailsViewModel
-
+    
     var body: some View {
         VStack {
             Text("\(viewModel.numberMultipliable)   x   \(viewModel.numberMultiplier)   =   ? ")

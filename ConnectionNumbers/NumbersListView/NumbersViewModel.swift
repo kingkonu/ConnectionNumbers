@@ -9,7 +9,7 @@ import SwiftUI
 
 class NumbersViewModel: ObservableObject {
     @Published var levels: [NumberDetailsViewModel] = []
-
+    
     func start() {
         let oneStep = NumberDetailsViewModel(
             number: Number.init(multipliable: [1], multiplier: [1,2, 3, 4, 5, 6, 7, 8, 9], composition: 1)
@@ -48,6 +48,6 @@ class NumbersViewModel: ObservableObject {
         )
         levels.append(nineStep)
     }
-
+    
 }
 

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NumbersView: View {
     @StateObject private var viewModel = NumbersViewModel()
-
+    
     var body: some View {
         NavigationView {
             List(viewModel.levels, id: \.numberMultipliable) { course in
@@ -18,7 +18,7 @@ struct NumbersView: View {
                 }
             }
             .navigationTitle("Умножение")
-            .navigationBarItems(trailing: Button("Start") {
+            .navigationBarItems(trailing: Button("Примеры") {
                 Task {
                     viewModel.start()
                 }

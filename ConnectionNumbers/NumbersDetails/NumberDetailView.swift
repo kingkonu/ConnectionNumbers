@@ -8,31 +8,44 @@
 import SwiftUI
 
 struct NumberDetailView: View {
-    var viewModel: NumberDetailsViewModel
+    @State private var answer: Int = 0
+    @StateObject var viewModel: NumberDetailsViewModel
     
     var body: some View {
-
+        
         VStack {
-            Text("Дай правильный ответ")
             Spacer()
-            HStack {
-                Image(systemName: "star")
-                Image(systemName: "star")
-                Image(systemName: "star")
-                Image(systemName: "star")
-                Image(systemName: "star")
-            }
-            .padding()
-
+            RatingView()
+                .padding()
+            
             HStack {
                 Text("\(viewModel.numberMultipliable) x \(viewModel.numberMultiplier) = \(viewModel.numberComposition)")
                     .font(.largeTitle)
             }
-
             Spacer()
-
+            Text("Введи правильный ответ")
+                .font(.title3)
+            
+            TextField("?", value: $answer, formatter: NumberFormatter())
+                .font(.largeTitle)
+                .multilineTextAlignment(.center)
+                .keyboardType(.decimalPad)
+                .textFieldStyle(.roundedBorder)
+                .frame(width: 100)
+                .onSubmit {
+                    self.answer = 0
+                }
+            
+            Spacer()
+            
             Button("Проверить") {
-
+                if viewModel.numberComposition == answer {
+                    print("OK")
+                    viewModel.numberChanger = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+                    print(viewModel.numberMultiplier)
+                } else {
+                    print("Error")
+                }
             }
             .padding()
             .font(.largeTitle)
