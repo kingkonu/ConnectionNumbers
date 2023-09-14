@@ -9,13 +9,16 @@ import SwiftUI
 
 struct NumberDetailView: View {
     @State private var answer: Int = 0
+    @State private var rating = 0
+    @State private var showSuccess = false
+    
     @StateObject var viewModel: NumberDetailsViewModel
     
     var body: some View {
         
         VStack {
             Spacer()
-            RatingView()
+            RatingView(rating: $rating)
                 .padding()
             
             HStack {
@@ -43,12 +46,21 @@ struct NumberDetailView: View {
                     print("OK")
                     viewModel.numberChanger = [1, 2, 3, 4, 5, 6, 7, 8, 9]
                     print(viewModel.numberMultiplier)
+                    rating += 1; do {
+                        if rating == 5 {
+                            showSuccess.toggle()
+                        }
+                    }
                 } else {
                     print("Error")
+                    rating -= 1
                 }
             }
             .padding()
             .font(.largeTitle)
+            .sheet(isPresented: $showSuccess) {
+                CongratulationsView()
+            }
         }
     }
 }

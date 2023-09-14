@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct RatingView: View {
+    @Binding var rating: Int
+    let maximumRating = 5
+
+    let onColor = Color.yellow
+    let offColor = Color.gray
+
     var body: some View {
         HStack {
-            ForEach(0 ..< 5) { _ in
+            ForEach(1 ..< maximumRating + 1, id: \.self) { index in
                 Image(systemName: "star")
-                    .foregroundColor(.gray)
+                    .foregroundColor(
+                        index > rating ? offColor : onColor)
             }
         }
     }
@@ -20,7 +27,7 @@ struct RatingView: View {
 
 struct RatingView_Previews: PreviewProvider {
     static var previews: some View {
-        RatingView()
+        RatingView(rating: .constant(3))
     }
 }
-
+
