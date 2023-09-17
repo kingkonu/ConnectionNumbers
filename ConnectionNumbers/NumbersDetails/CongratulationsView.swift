@@ -10,10 +10,9 @@ import SwiftUI
 struct CongratulationsView: View {
     var body: some View {
         VStack {
-            Image(systemName: "pencil.and.ruler")
+            Image("check")
                 .resizable()
-                .frame(width: 50, height: 50)
-                .foregroundColor(.indigo)
+                .frame(width: 100, height: 100)
                 .padding()
             Text("Молодец!")
                 .font(.largeTitle)

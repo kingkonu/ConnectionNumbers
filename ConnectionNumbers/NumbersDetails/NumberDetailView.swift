@@ -22,7 +22,7 @@ struct NumberDetailView: View {
                 .padding()
             
             HStack {
-                Text("\(viewModel.numberMultipliable) x \(viewModel.numberMultiplier) = \(viewModel.numberComposition)")
+                Text("\(viewModel.numberMultipliable) x \(viewModel.numberMultiplier) = ?")
                     .font(.largeTitle)
             }
             Spacer()
