@@ -12,17 +12,16 @@ struct WelcomeView: View {
 
     var body: some View {
         ZStack {
-            Image("key")
-//                .resizable()
-//                .frame(width: 50, height: 50)
-//                .foregroundColor(.black)
+            Image("atom")
+                .resizable()
+                .frame(width: 80, height: 80)
                 .scaleEffect(animate ? 2 : 1)
                 .onAppear {
                     animate.toggle()
                 }
                 .animation(.easeIn(duration: 5), value: animate)
 
-            NumbersView()
+            TestView()
                 .opacity(animate ? 1 : 0)
                 .animation(.easeOut.delay(2), value: animate)
         }
