@@ -10,7 +10,7 @@ import SwiftUI
 struct CongratulationsView: View {
     var body: some View {
         VStack {
-            Image("check")
+            Image("list")
                 .resizable()
                 .frame(width: 100, height: 100)
                 .padding()

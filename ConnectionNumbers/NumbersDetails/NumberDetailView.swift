@@ -26,6 +26,7 @@ struct NumberDetailView: View {
                     .font(.largeTitle)
             }
             Spacer()
+            
             Text("Введи правильный ответ")
                 .font(.title3)
             
@@ -46,6 +47,7 @@ struct NumberDetailView: View {
                     print("OK")
                     viewModel.numberChanger = [1, 2, 3, 4, 5, 6, 7, 8, 9]
                     print(viewModel.numberMultiplier)
+                    answer = 0
                     rating += 1; do {
                         if rating == 5 {
                             showSuccess.toggle()

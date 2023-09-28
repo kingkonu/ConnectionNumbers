@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WelcomeView: View {
     @State private var animate = false
-    
+
     var body: some View {
         ZStack {
             Image("atom")
@@ -20,7 +20,7 @@ struct WelcomeView: View {
                     animate.toggle()
                 }
                 .animation(.easeIn(duration: 5), value: animate)
-            
+
             EducationView()
                 .opacity(animate ? 1 : 0)
                 .animation(.easeOut.delay(2), value: animate)

@@ -11,7 +11,6 @@ struct Number {
     let multipliable: [Int] // множимое
     let multiplier: [Int]  // множитель
     var composition: Int // произведение
-
 }
 
 extension Number {

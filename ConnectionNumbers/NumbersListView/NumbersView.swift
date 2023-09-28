@@ -11,7 +11,7 @@ struct NumbersView: View {
     @StateObject private var viewModel = NumbersViewModel()
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List(viewModel.levels, id: \.numberMultipliable) { course in
                 NavigationLink(destination: NumberDetailView(viewModel: course)) {
                     RowView(viewModel: course)
@@ -21,9 +21,11 @@ struct NumbersView: View {
             .navigationBarItems(trailing: Button("Примеры") {
                 Task {
                     viewModel.start()
+                    viewModel.education()
                 }
             })
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

@@ -46,7 +46,7 @@ struct TestView_Previews: PreviewProvider {
 
 struct SectionView: View {
 
-    var section: Section
+    let section: Section
 
     var body: some View {
         VStack {
@@ -85,11 +85,53 @@ let pencil = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.96862
 let addColor = #colorLiteral(red: 1, green: 0.1857388616, blue: 0.5733950138, alpha: 1)
 
 let sectionData = [
-    Section(text: "В математике все предметы и объекты могут быть обозначены числами", image: Image("candy"), loga: "=  1", color: Color(pencil), width: 50, height: 50),
-    Section(text: "Если говорить про умножение, то это число называется", image: Image("candy"), loga: "МНОЖИМОЕ", color: Color(addColor), width: 50, height: 50),
-    Section(text: "Второе числе после знака -x-, обозначающего действие умножения, обладает супер силой и называется" , image: Image("cloning"), loga: "МНОЖИТЕЛЬ", color: Color(pencil), width: 50, height: 50),
-    Section(text: "Его проще представить как машину по клонированию или ксерокс (на работе у ваших родителей). Если поместить туда любой предмет или число он скопирует его заданное количество раз.", image: Image("cloning"), loga: "", color: Color(addColor), width: 50, height: 50),
-    Section(text: "Значение множителя установлено на 2", image: Image("example"), loga: "", color: Color(pencil), width: 250, height: 120),
-    Section(text: "Полученный ответ называется Произведением. Это все те же конфеты, что и в начале, но их больше так как с ними поработал Множитель", image: Image("candy"), loga: "", color: Color(addColor), width: 50, height: 50),
-    Section(text: "И последнее, если поменять местами множимое и множитель ничего не измениться", image: Image("example2"), loga: "", color: Color(pencil), width: 250, height: 70)
+    Section(
+        text: "В математике все предметы и объекты могут быть обозначены числами",
+        image: Image("candy"),
+        loga: "=  1",
+        color: Color(pencil),
+        width: 50, height: 50
+    ),
+    Section(
+        text: "Если говорить про умножение, то это число называется",
+        image: Image("candy"),
+        loga: "МНОЖИМОЕ",
+        color: Color(addColor),
+        width: 50, height: 50
+    ),
+    Section(
+        text: "Второе числе после знака -x-, обозначающего действие умножения, обладает супер силой и называется" ,
+        image: Image("cloning"),
+        loga: "МНОЖИТЕЛЬ",
+        color: Color(pencil),
+        width: 50, height: 50
+    ),
+    Section(
+        text: "Его проще представить как машину по клонированию или ксерокс (на работе у ваших родителей). Если поместить туда любой предмет или число он скопирует его заданное количество раз.",
+        image: Image("cloning"),
+        loga: "",
+        color: Color(addColor),
+        width: 50, height: 50
+    ),
+    Section(
+        text: "Значение множителя установлено на 2",
+        image: Image("example"),
+        loga: "",
+        color: Color(pencil),
+        width: 250, height: 120
+    ),
+    Section(
+        text: "Полученный ответ называется Произведением. Это все те же конфеты, что и в начале, но их больше так как с ними поработал Множитель",
+        image: Image("candy"),
+        loga: "",
+        color: Color(addColor),
+        width: 50, height: 50
+    ),
+    Section(
+        text: "И последнее, если поменять местами множимое и множитель ничего не измениться", 
+        image: Image("example2"), 
+        loga: "", 
+        color: Color(pencil), 
+        width: 250, height: 70
+    )
 ]
